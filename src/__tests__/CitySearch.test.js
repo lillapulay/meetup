@@ -1,12 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-
 import CitySearch from '../CitySearch';
 
 describe('<CitySearch /> component', () => {
   let CitySearchWrapper;
   beforeAll(() => {
-    CitySearchWrapper = shallow(<CitySearch />);
+    CitySearchWrapper = shallow(<CitySearch updateEvents={() => { }} />);
   });
 
   test('render text input', () => {
@@ -23,8 +22,7 @@ describe('<CitySearch /> component', () => {
   });
 
   test('change state when text input changes', () => {
-    const eventObject = { target: { value: 'Berlin' } };
-    CitySearchWrapper.find('.city').simulate('change', eventObject);
+    CitySearchWrapper.find('.city').simulate('change', { target: { value: 'Berlin' } });
     expect(CitySearchWrapper.state('query')).toBe('Berlin');
   });
 
@@ -37,7 +35,6 @@ describe('<CitySearch /> component', () => {
   });
 
   test('click on suggestion should change query state', () => {
-    CitySearchWrapper = shallow(<CitySearch updateEvents={() => { }} />);
     CitySearchWrapper.setState({
       suggestions: [
         {
@@ -62,13 +59,14 @@ describe('<CitySearch /> component', () => {
       ]
     });
 
+    expect(CitySearchWrapper.find('.suggestions li')).toHaveLength(2);
     CitySearchWrapper.find('.suggestions li').at(0).simulate('click');
     expect(CitySearchWrapper.state('query')).toBe('Munich, Germany');
+    expect(CitySearchWrapper.find('.suggestions li')).toHaveLength(0);
   });
 });
 
 describe('<CitySearch /> integration', () => {
-
   test('get a list of cities when user searches for Munich', async () => {
     const CitySearchWrapper = shallow(<CitySearch />);
     CitySearchWrapper.find('.city').simulate('change', { target: { value: 'Munich' } });

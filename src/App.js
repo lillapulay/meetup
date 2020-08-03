@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+
 import './App.css';
-import EventList from './EventList';
+
 import CitySearch from './CitySearch';
+import EventList from './EventList';
 import NumberOfEvents from './NumberOfEvents';
 import { getEvents } from './api';
 
@@ -18,8 +20,8 @@ class App extends Component {
     return (
       <div className="App">
         <CitySearch updateEvents={this.updateEvents} />
-        <NumberOfEvents />
-        <EventList events={this.state.events} />
+        <EventList />
+        <NumberOfEvents events={this.state.events} />
       </div>
     );
   }
