@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 
 import './App.css';
-
-import CitySearch from './CitySearch';
 import EventList from './EventList';
+import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
 import { getEvents } from './api';
 
 class App extends Component {
+
   state = {
-    events: [],
+    events: []
   }
 
   updateEvents = (lat, lon) => {
@@ -20,11 +20,12 @@ class App extends Component {
     return (
       <div className="App">
         <CitySearch updateEvents={this.updateEvents} />
-        <EventList />
-        <NumberOfEvents events={this.state.events} />
+        <EventList events={this.state.events} />
+        <NumberOfEvents />
       </div>
     );
   }
 }
+
 
 export default App;

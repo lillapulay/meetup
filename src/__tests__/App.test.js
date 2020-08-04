@@ -44,4 +44,11 @@ describe('<App /> integration', () => {
     await AppWrapper.update();
     expect(AppWrapper.state('events')).toEqual(mockEvents.events);
   });
+
+  test('render correct list of events', () => {
+    const AppWrapper = mount(<App />);
+    AppWrapper.setState({ events: [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }] });
+    expect(AppWrapper.find('.Event')).toHaveLength(4);
+    AppWrapper.unmount();
+  });
 });
