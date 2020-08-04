@@ -55,43 +55,8 @@ const mockEvents = {
       description: '<p>Every year in October, International JavaScript Conference Munich is where seasoned experts get together to discuss methods, libraries, services, models and algorithms to use. We are looking forward to meeting you this year as well!</p> ',
       visibility: 'public',
       member_pay_fee: false
-    },
-    {
-      local_time: '18:00',
-      local_date: '2020-09-26',
-      link: 'https://www.meetup.com/Munchen-Sprechen-Sie-Deutsch-Meetup/events/272249723/',
-      visibility: 'public_limited',
-      group: {
-        created: 1476816860000,
-        name: 'München Sprechen Sie Deutsch Meetup',
-        id: 20789505,
-        join_mode: 'open',
-        lat: 48.13999938964844,
-        lon: 11.579999923706055,
-        urlname: 'Munchen-Sprechen-Sie-Deutsch-Meetup',
-        who: 'Mitglieder',
-        localized_location: 'München, Germany',
-        state: '',
-        country: 'de',
-        region: 'en_US',
-        timezone: 'Europe/Berlin'
-      },
-      waitlist_count: 0,
-      yes_rsvp_count: 3,
-      duration: 7200000,
-      time: 1601136000000,
-      utc_offset: 7200000,
-      name: 'MVHS: Das Oktoberfestattentat und die Kontinuitäten rechten Terrors',
-      id: '272249723'
     }
   ]
 };
 
 export { mockEvents };
-
-
-
-
-
-
-
