@@ -1,35 +1,30 @@
-import puppeteer from 'puppeteer';
+import puppeteer from "puppeteer";
 
-describe('show/hide an event details', () => {
+describe("show/hide an event details", () => {
+
+  let browser;
+  let page;
+
   beforeEach(async () => {
-    jest.setTimeout(40000)
-  })
+    // jest.setTimeout(40000);
+    browser = await puppeteer.launch();
+    page = await browser.newPage();
+    await page.goto("http://localhost:3000/");
+    await page.waitForSelector(".Event");
+  });
 
-  test('An event element is collapsed by default', async () => {
-    const browser = await puppeteer.launch({
-      args: [
-        '--no-sandbox',
-        '--disable-setuid-sandbox',
-        '--disable-extensions']
-    });
-    const page = await browser.newPage();
-    await page.goto('http://localhost:3000/');
-    await page.waitForSelector('.Event');
-    const extra = await page.$('.Event .extra');
-    expect(extra).toBeNull();
+  afterAll(() => {
     browser.close();
   });
 
-  test('User can expand an event to see its details', async () => {
-    const browser = await puppeteer.launch();
-    const page = await browser.newPage();
-    await page.goto('http://localhost:3000/');
+  test("An event element is collapsed by default", async () => {
+    const extra = await page.$(".Event .extra");
+    expect(extra).toBeNull();
+  });
 
-    await page.waitForSelector('.Event');
-    await page.click('.Event .details-btn');
-
-    const extra = await page.$('.Event .extra');
+  test("User can expand an event to see its details", async () => {
+    await page.click(".Event .details-btn");
+    const extra = await page.$(".Event .extra");
     expect(extra).toBeDefined();
-    browser.close();
   });
 });
