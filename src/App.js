@@ -5,6 +5,7 @@ import EventList from './EventList';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
 import { getEvents } from './api';
+import { WarningAlert } from './Alert';
 
 class App extends Component {
 
@@ -12,7 +13,8 @@ class App extends Component {
     events: [],
     lat: null,
     lon: null,
-    page: null
+    page: null,
+    warningText: ''
   }
 
   componentDidMount() {
@@ -20,6 +22,12 @@ class App extends Component {
   }
 
   updateEvents = (lat, lon, page) => {
+    if (!navigator.onLine) {
+      this.setState({ warningText: 'You are currently offline. Connect to the internet to perform a new search.' });
+    } else {
+      this.setState({ warningText: '' })
+    }
+
     if (lat && lon) {
       getEvents(lat, lon, this.state.page)
         .then(events => this.setState({ events, lat, lon })
@@ -40,6 +48,7 @@ class App extends Component {
       <div className="App">
         <CitySearch updateEvents={this.updateEvents} />
         <NumberOfEvents updateEvents={this.updateEvents} />
+        <WarningAlert text={this.state.warningText} />
         <EventList events={this.state.events} />
       </div>
     );
