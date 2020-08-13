@@ -1,3 +1,16 @@
+# MeetUp App
+
+## About
+```
+MeetUp application created by create-react-app, utilizing the MeetUp API.
+This project was part of the CF Full-Stack Web Development course. 
+```
+
+### Planned updates:
+```
+- styling updates
+- pie chart placement
+```
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
