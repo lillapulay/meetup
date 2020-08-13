@@ -6,9 +6,11 @@
   "dependencies": {
     "atatus-spa": "^4.2.1",
     "axios": "^0.19.2",
+    "moment": "^2.27.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-scripts": "^3.4.1"
+    "react-scripts": "^3.4.3",
+    "recharts": "^1.8.5"
   },
   "scripts": {
     "start": "react-scripts start",
