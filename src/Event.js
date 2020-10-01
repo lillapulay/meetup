@@ -19,7 +19,7 @@ class Event extends Component {
     }, {
       name: "available", value: (event.rsvp_limit - event.yes_rsvp_count)
     }];
-    const colors = ["#E21D86", "#1DE279"];
+    const colors = ["#8894B1", "#81354E"];
 
     return (
       <div className="Event">

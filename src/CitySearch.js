@@ -40,7 +40,7 @@ class CitySearch extends Component {
           className="city"
           value={this.state.query}
           onChange={this.handleInputChanged}
-          placeholder="City" />
+          placeholder="Choose a city..." />
 
         <ul className="suggestions">
           {this.state.suggestions.map(item =>

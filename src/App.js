@@ -10,6 +10,8 @@ import NumberOfEvents from './NumberOfEvents';
 import { getEvents } from './api';
 import { WarningAlert } from './Alert';
 
+import logotitle from "./img/logotitle.png";
+
 class App extends Component {
 
   state = {
@@ -72,12 +74,16 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <div>
+          <img className="logotitle" src={logotitle}
+            alt="MeetUp App logo" />
+        </div>
         <CitySearch updateEvents={this.updateEvents} />
         <NumberOfEvents updateEvents={this.updateEvents} />
         <WarningAlert text={this.state.warningText} />
-
         <ResponsiveContainer height={400}>
           <ScatterChart
+            className="chart"
             margin={{
               top: 20, right: 20, bottom: 20, left: 20,
             }}>
@@ -88,7 +94,6 @@ class App extends Component {
             <Scatter data={this.getData()} fill="#8884d8" />
           </ScatterChart>
         </ResponsiveContainer>
-
         <EventList events={this.state.events} />
       </div>
     );
