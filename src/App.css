@@ -7,7 +7,16 @@
   box-sizing: border-box;
 }
 
-.logotitle {
+.personalLogo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border-radius: 50%;
+  opacity: 0.5;
+  filter: hue-rotate(145deg);
+}
+
+.logoTitle {
   height: 200px;
   border-radius: 30px;
   opacity: 1;
@@ -15,7 +24,7 @@
 }
 
 @keyframes fade {
-  0%,100% { opacity: 0.7 }
+  0%,100% { opacity: 0.6 }
   50% { opacity: 0.9 }
 }
 
@@ -71,13 +80,14 @@ input[type="text"], input[type="number"] {
   margin-top: 5px;
   font-size: 14px;
   opacity: 0.9;
+  color: white;
 }
 
 .suggestions > li {
   text-align: left;
   padding: 8px 6px 8px 10px;
   background-color: #351123;
-  opacity: 0.8;
+  opacity: 0.9;
   color: white;
   cursor: default;
 }
@@ -149,7 +159,7 @@ span {
 }
 
 .link {
-  color: white;
+  color: #8894B1;
 }
 
 .number-of-events {

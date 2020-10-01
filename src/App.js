@@ -10,7 +10,8 @@ import NumberOfEvents from './NumberOfEvents';
 import { getEvents } from './api';
 import { WarningAlert } from './Alert';
 
-import logotitle from "./img/logotitle.png";
+import logoTitle from "./img/logotitle.png";
+import personalLogo from "./img/lilla-pulay-logo.png";
 
 class App extends Component {
 
@@ -74,8 +75,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <a href="https://lillapulay.dev" target="_blank">
+          <img className="personalLogo" src={personalLogo}
+            alt="Developer logo" />
+        </a>
         <div>
-          <img className="logotitle" src={logotitle}
+          <img className="logoTitle" src={logoTitle}
             alt="MeetUp App logo" />
         </div>
         <CitySearch updateEvents={this.updateEvents} />
