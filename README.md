@@ -1,68 +1,54 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# MeetUp App
 
-## Available Scripts
+![under construction](https://www.greal.eu/wp-content/uploads/2017/11/Under_Construction.png)
 
-In the project directory, you can run:
+## About
+MeetUp application created by create-react-app, utilizing a serverless backend with AWS Lambda and fetching events from the MeetUp API. 
 
-### `npm start`
+I'm planning to give it some styling updates soon. For now, the **hosted project** can be viewed [here](https://lillapulay.github.io/meetup/). 
+The app visualizes the number of events coming up in the next 7 days and shows a list of all events in a certain location. Further details are available by clicking the "Details" button. 
+This project was part of the CF Full-Stack Web Development course. 
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The app was built into a **Progressive Web Application (PWA)** and passed Lighthouse's PWA checklist. During the process, it required gaining experience with **Continuous Delivery and Intergration**, and **Object-Oriented Programming**. The app has **offline availability** with the help of a service worker, includes **data visualisation** (number of events) and uses the **OAuth2 authentication** flow. The API calls are made with Axios and use asynchronous functionality. The app used Atatus for Application Performance Monitoring (trial version).
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Testing
+The goal of this project was to practice different testing methods and thus included:
+- Unit Testing
+- Integration Testing
+- Acceptance Testing
+- End-to-End Testing.
 
-### `npm test`
+You can see the **test scenarios** on [this link](https://lillapulay.dev/files/Test_Scenarios.pdf).
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Testing tools
+- "enzyme",
+- "enzyme-adapter-react-16",
+- "jest-cucumber",
+- "puppeteer"
 
-### `npm run build`
+## User stories
+1. As a user, I would like to be able to filter events by city so that I can see the list of events that take place in that city.
+2. As a user, I would like to be able to show/hide event details so that I can see more/less information about an event.
+3. As a user, I would like to be able to specify the number of events I want to view in the app so that I can see more or fewer events in the events list at once.
+4. As a user, I would like to be able to use the app when offline so that I can see the events I viewed the last time I was online.
+5. As a user, I would like to be able to add the app shortcut to my home screen so that I can open the app faster.
+6. As a user, I would like to be able to see a chart showing the number of upcoming events in a city by date so that I know on which days I can attend Meetup events.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Key features
+Extracted from the user stories above, the following requirements were laid out:
+1. Filter events by city.
+2. Show/hide event details.
+3. Specify number of events.
+4. Use the app when offline.
+5. Add app shortcut to the home screen.
+6. View a chart showing the number of upcoming events by date
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Dependencies
+- "axios",
+- "react",
+- "react-dom",
+- "react-scripts"
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### Planned updates:
+- [ ] Styling (e.g. background image)
+- [ ] Pie chart placement
