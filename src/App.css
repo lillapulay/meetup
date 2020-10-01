@@ -3,6 +3,10 @@
   padding: 2% 5%;
 }
 
+.App * {
+  box-sizing: border-box;
+}
+
 .logotitle {
   height: 200px;
   border-radius: 30px;
@@ -16,12 +20,13 @@
 }
 
 .chart {
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);  
   border-radius: 30px;
 }
 
-.App * {
-  box-sizing: border-box;
+/* ? */
+.listOfEvents {
+  backdrop-filter: blur(5px);
 }
 
 ul {
@@ -52,7 +57,7 @@ input[type="text"], input[type="number"] {
   text-align: left;
   margin-top: 10px;  
   border-radius: 30px;
-  opacity: 80%;
+  opacity: 0.9;
 }
 
 .CitySearch {
@@ -65,14 +70,14 @@ input[type="text"], input[type="number"] {
   align-self: center;
   margin-top: 5px;
   font-size: 14px;
-  opacity: 70%;
+  opacity: 0.9;
 }
 
 .suggestions > li {
   text-align: left;
   padding: 8px 6px 8px 10px;
   background-color: #351123;
-  opacity: 100%;
+  opacity: 0.8;
   color: white;
   cursor: default;
 }
@@ -106,7 +111,7 @@ span {
   position: relative;
   backdrop-filter: blur(5px);
   background-color: #351123;
-  opacity: 80%;
+  opacity: 0.9;
   color: #d9d9d9;
 }
 

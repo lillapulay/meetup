@@ -80,7 +80,7 @@ class App extends Component {
         </div>
         <CitySearch updateEvents={this.updateEvents} />
         <NumberOfEvents updateEvents={this.updateEvents} />
-        <WarningAlert text={this.state.warningText} />
+        <WarningAlert className="warningText" text={this.state.warningText} />
         <ResponsiveContainer height={400}>
           <ScatterChart
             className="chart"

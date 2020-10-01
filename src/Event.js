@@ -15,9 +15,9 @@ class Event extends Component {
   render() {
     const event = this.props.event;
     const data = [{
-      name: "taken", value: event.yes_rsvp_count
+      name: "Taken", value: event.yes_rsvp_count
     }, {
-      name: "available", value: (event.rsvp_limit - event.yes_rsvp_count)
+      name: "Available", value: (event.rsvp_limit - event.yes_rsvp_count)
     }];
     const colors = ["#8894B1", "#81354E"];
 
@@ -38,22 +38,22 @@ class Event extends Component {
           {event.yes_rsvp_count} people are going
           </p>
 
-        {event.rsvp_limit &&
-          <ResponsiveContainer height={150} width={250}>
-            <PieChart>
-              <Pie data={data} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={32} label >
-                {
-                  data.map((entry, index) => (<Cell key={`cell-${index}`} fill={colors[index]} />))
-                }
-              </Pie>
-              <Legend iconSize={12} iconType="circle" layout="horizontal" verticalAlign="bottom" align="center" />
-              <Tooltip />
-            </PieChart>
-          </ResponsiveContainer>
-        }
-
         {this.state.expanded &&
           <div className="extra">
+            {event.rsvp_limit &&
+              <ResponsiveContainer height={150} width={250}>
+                <PieChart>
+                  <Pie data={data} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={32} label >
+                    {
+                      data.map((entry, index) => (<Cell key={`cell-${index}`} fill={colors[index]} />))
+                    }
+                  </Pie>
+                  <Legend iconSize={12} iconType="circle" layout="horizontal" verticalAlign="bottom" align="center" />
+                  <Tooltip />
+                </PieChart>
+              </ResponsiveContainer>
+            }
+
             {event.venue && event.venue.name &&
               <p className="address">
                 {event.venue.name
