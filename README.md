@@ -5,19 +5,19 @@
 ## About
 MeetUp application created by create-react-app, utilizing a serverless backend with AWS Lambda and fetching events from the MeetUp API. See the **hosted project** [here](https://lillapulay.github.io/meetup/). <br />
 
-![data visualization](src/img/meetupL2.PNG)<br />
+![data visualization](src/img/meetupL2.PNG)<br /><br />
 The app visualizes the number of events coming up in the next 7 days and shows a list of all events in a certain location. <br>
 
 
-![MeetUp App](src/img/meetupL3.PNG)<br />
+![MeetUp App](src/img/meetupL3.PNG)<br /><br />
 Further details are available by clicking the "Details" button. 
 
 
-![MeetUp App](src/img/meetupL4.PNG)<br />
+![MeetUp App](src/img/meetupL4.PNG)<br /><br />
 This project was part of the CF Full-Stack Web Development course. 
 
-The app was built into a **Progressive Web Application (PWA)** and passed Lighthouse's PWA checklist. During the process, it required gaining experience with **Continuous Delivery and Intergration**, and **Object-Oriented Programming**. The app has **offline availability** with the help of a service worker, includes **data visualisation** (number of events) and uses the **OAuth2 authentication** flow. The API calls are made with Axios and use asynchronous functionality. The app used Atatus for Application Performance Monitoring (trial version).<br />
-![MeetUp App](src/img/meetupmobile.png)
+The app was built into a **Progressive Web Application (PWA)** and passed Lighthouse's PWA checklist. During the process, it required gaining experience with **Continuous Delivery and Intergration**, and **Object-Oriented Programming**. The app has **offline availability** with the help of a service worker, includes **data visualisation** (number of events) and uses the **OAuth2 authentication** flow. The API calls are made with Axios and use asynchronous functionality. The app used Atatus for Application Performance Monitoring (trial version).<br /><br />
+![MeetUp App](src/img/meetupmobile.png)<br />
 
 ## Testing
 The goal of this project was to practice different testing methods and thus included:
