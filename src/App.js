@@ -105,6 +105,11 @@ class App extends Component {
         </ResponsiveContainer>
         <h4 id="allTitle">All events</h4>
         <EventList events={this.state.events} />
+        <span id="photoCredit">
+          Photo by <a href="https://unsplash.com/@nightwxnderer?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
+            Crystal C
+            </a>
+        </span>
       </div>
     );
   }

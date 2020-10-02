@@ -8,12 +8,13 @@
 }
 
 .personalLogo {
-  position: absolute;
+  position: fixed;
   top: 10px;
   left: 10px;
   border-radius: 50%;
   opacity: 0.7;
   filter: hue-rotate(125deg);
+  z-index: -1;
 }
 
 .logoTitle {
@@ -158,6 +159,13 @@ input[type="text"], input[type="number"] {
 span {
   color: #d9d9d9;  
   font-weight: 700;
+}
+
+#photoCredit,
+#photoCredit a {
+  color: #8894B1;
+  opacity: 0.7;
+  font-size: 14px;
 }
 
 .Event {
