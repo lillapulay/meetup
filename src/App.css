@@ -12,20 +12,70 @@
   top: 10px;
   left: 10px;
   border-radius: 50%;
-  opacity: 0.5;
-  filter: hue-rotate(145deg);
+  opacity: 0.8;
+  filter: hue-rotate(135deg);
 }
 
 .logoTitle {
-  height: 200px;
+  max-width: 300px;
   border-radius: 30px;
   opacity: 1;
   animation: fade 5s infinite;
+  margin-top: 60px;
+  margin-bottom: 20px;
 }
 
 @keyframes fade {
   0%,100% { opacity: 0.6 }
   50% { opacity: 0.9 }
+}
+
+@media all and (max-width: 301px) {
+  .logoTitle {
+    max-width: 95%;
+  }
+
+  .city {
+    max-width: 95%;
+  }
+
+  .suggestions {
+    max-width: 95%;
+  }
+}
+
+h4 {
+  color: #d9d9d9;
+  border-radius: 30px;
+  margin: 0 auto;  
+  background-color: #351123;
+  opacity: 0.9;
+  padding: 15px;
+}
+
+#adventureTitle {
+  margin-top: 10px;
+  margin-bottom: 15px;;
+  max-width: 450px;;
+}
+
+#upcomingTitle {
+  margin-top: 30px;
+  max-width: 400px;
+  margin-bottom: 15px;;
+}
+
+#allTitle {
+  margin-top: 20px;
+  max-width: 200px;
+}
+
+.searchArea {  
+  backdrop-filter: blur(5px); 
+  max-width: 350px;
+  padding: 15px 10px;
+  border-radius: 30px;
+  margin: 0 auto;
 }
 
 .chart {
@@ -101,22 +151,20 @@ input[type="text"], input[type="number"] {
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 16px;
 }
-
-span {
-  color: #d9d9d9;
-  backdrop-filter: 5px;  
-  font-weight: 700;
-}
-
 .suggestions > li:hover {
   background-color: #81354E;
 }
 
+span {
+  color: #d9d9d9;  
+  font-weight: 700;
+}
+
 .Event {
   padding: 20px 30px;
+  margin-top: 20px;
   margin-bottom: 10px;
   text-align: left;
-  border: 1px solid #ccc;
   border-radius: 30px;
   position: relative;
   backdrop-filter: blur(5px);
@@ -162,9 +210,9 @@ span {
   color: #8894B1;
 }
 
-.number-of-events {
+#number-of-events {
   width: 80px;
-  margin: 20px 10px 50px;
+  margin: 10px;
   text-align: right;
   backdrop-filter: 5px;
   background-color: #351123;

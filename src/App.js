@@ -75,7 +75,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <a href="https://lillapulay.dev" target="_blank">
+        <a href="https://lillapulay.dev" target="_blank" rel="noopener noreferrer">
           <img className="personalLogo" src={personalLogo}
             alt="Developer logo" />
         </a>
@@ -83,9 +83,13 @@ class App extends Component {
           <img className="logoTitle" src={logoTitle}
             alt="MeetUp App logo" />
         </div>
-        <CitySearch updateEvents={this.updateEvents} />
-        <NumberOfEvents updateEvents={this.updateEvents} />
-        <WarningAlert className="warningText" text={this.state.warningText} />
+        <h4 id="adventureTitle">Where does your next adventure take you?</h4>
+        <div className="searchArea" >
+          <CitySearch updateEvents={this.updateEvents} />
+          <NumberOfEvents updateEvents={this.updateEvents} />
+          <WarningAlert className="warningText" text={this.state.warningText} />
+        </div>
+        <h4 id="upcomingTitle">Upcoming events in the next 7 days</h4>
         <ResponsiveContainer height={400}>
           <ScatterChart
             className="chart"
@@ -99,6 +103,7 @@ class App extends Component {
             <Scatter data={this.getData()} fill="#8884d8" />
           </ScatterChart>
         </ResponsiveContainer>
+        <h4 id="allTitle">All events</h4>
         <EventList events={this.state.events} />
       </div>
     );
