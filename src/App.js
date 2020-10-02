@@ -83,7 +83,7 @@ class App extends Component {
           <img className="logoTitle" src={logoTitle}
             alt="MeetUp App logo" />
         </div>
-        <h4 id="adventureTitle">Where does your next adventure take you?</h4>
+        <h4 id="adventureTitle">Where will your next adventure take you?</h4>
         <div className="searchArea" >
           <CitySearch updateEvents={this.updateEvents} />
           <NumberOfEvents updateEvents={this.updateEvents} />
