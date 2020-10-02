@@ -62,3 +62,7 @@ Extracted from the user stories above, the following requirements were laid out:
 ### Updates:
 - [x] Styling (background image, logo, personal logo, titles, color, scrollbar)
 - [x] Pie chart placement (only when "Details" are visible)
+
+### Credits
+Background image: https://images.wallpaperscraft.com/image/night_city_street_city_lights_134353_1920x1080.jpg
+The app logo was created using canva.com.
