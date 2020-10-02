@@ -61,4 +61,4 @@ Extracted from the user stories above, the following requirements were laid out:
 
 ### Updates:
 - [x] Styling (background image, logo, personal logo, titles, color, scrollbar)
-- [x] Pie chart placement (only when "Details" are visble)
+- [x] Pie chart placement (only when "Details" are visible)
