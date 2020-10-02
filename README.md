@@ -1,15 +1,23 @@
 # MeetUp App
 
-![under construction](https://www.greal.eu/wp-content/uploads/2017/11/Under_Construction.png)
+![MeetUp App](src/img/meetupL.PNG)
 
 ## About
-MeetUp application created by create-react-app, utilizing a serverless backend with AWS Lambda and fetching events from the MeetUp API. 
+MeetUp application created by create-react-app, utilizing a serverless backend with AWS Lambda and fetching events from the MeetUp API. See the **hosted project** [here](https://lillapulay.github.io/meetup/). 
 
-I'm planning to give it some styling updates soon. For now, the **hosted project** can be viewed [here](https://lillapulay.github.io/meetup/). 
-The app visualizes the number of events coming up in the next 7 days and shows a list of all events in a certain location. Further details are available by clicking the "Details" button. 
+![data visualization](src/img/meetupL2.PNG)
+The app visualizes the number of events coming up in the next 7 days and shows a list of all events in a certain location. 
+
+
+![MeetUp App](src/img/meetupL3.PNG)
+Further details are available by clicking the "Details" button. 
+
+
+![MeetUp App](src/img/meetupL4.PNG)
 This project was part of the CF Full-Stack Web Development course. 
 
 The app was built into a **Progressive Web Application (PWA)** and passed Lighthouse's PWA checklist. During the process, it required gaining experience with **Continuous Delivery and Intergration**, and **Object-Oriented Programming**. The app has **offline availability** with the help of a service worker, includes **data visualisation** (number of events) and uses the **OAuth2 authentication** flow. The API calls are made with Axios and use asynchronous functionality. The app used Atatus for Application Performance Monitoring (trial version).
+![MeetUp App](src/img/meetupmobile.png)
 
 ## Testing
 The goal of this project was to practice different testing methods and thus included:
