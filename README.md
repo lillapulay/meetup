@@ -10,7 +10,7 @@ The app visualizes the number of events coming up in the next 7 days and shows a
 
 
 ![MeetUp App](src/img/meetupL3.PNG)<br /><br />
-Further details are available by clicking the "Details" button. 
+Further details can be accessed by clicking the "Details" button. If available in the database, the app renders a pie chart with the number of spots taken/available at the event. 
 
 
 ![MeetUp App](src/img/meetupL4.PNG)<br /><br />
@@ -34,9 +34,9 @@ You can see the **test scenarios** on [this link](https://lillapulay.dev/files/T
 - "jest-cucumber",
 - "puppeteer"
 
-
-![MeetUp App](src/img/logotitle.png)
 ## User stories
+
+![MeetUp App](src/img/logotitle.png) <br />
 1. As a user, I would like to be able to filter events by city so that I can see the list of events that take place in that city.
 2. As a user, I would like to be able to show/hide event details so that I can see more/less information about an event.
 3. As a user, I would like to be able to specify the number of events I want to view in the app so that I can see more or fewer events in the events list at once.
@@ -59,6 +59,6 @@ Extracted from the user stories above, the following requirements were laid out:
 - "react-dom",
 - "react-scripts"
 
-### Planned updates:
-- [ ] Styling (e.g. background image)
-- [ ] Pie chart placement
+### Updates:
+- [x] Styling (background image, logo, personal logo, titles, color, scrollbar)
+- [x] Pie chart placement (only when "Details" are visble)
