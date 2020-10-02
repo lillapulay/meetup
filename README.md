@@ -65,4 +65,4 @@ Extracted from the user stories above, the following requirements were laid out:
 
 ### Credit
 - Source of the background image: https://images.wallpaperscraft.com/image/night_city_street_city_lights_134353_1920x1080.jpg
-- The app logo was created using (Canva)[https://canva.com].
+- The app logo was created using [Canva](https://canva.com).
